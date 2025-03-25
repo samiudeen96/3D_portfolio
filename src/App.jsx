@@ -18,12 +18,12 @@ const App = () => {
       <div className="relative z-0 bg-primary">
         <div className="bg-hero bg-cover bg-no-repeat bg-center">
           <Navbar />
-          <div className="pt-40 sm:pt-25">
+          <div className="pt-40 sm:pt-25 lg:pt-50">
             <Hero />
           </div>
         </div>
-        {/* <About />
-            <Experience />
+        <About />
+          {/*   <Experience />
             <Tech />
             <Works />
             <Feedbacks />
