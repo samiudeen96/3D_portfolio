@@ -1,6 +1,6 @@
 import { BrowserRouter } from "react-router-dom";
 
-import { useState } from 'react'
+import { useState } from "react";
 
 import {
   About,
@@ -14,7 +14,7 @@ import {
   StarsCanvas,
 } from "./components";
 
-const App = () => { 
+const App = () => {
   return (
     <BrowserRouter>
       <div className="relative z-0 bg-primary">
@@ -26,10 +26,9 @@ const App = () => {
         </div>
 
         <About />
-
+        <Experience />
         
-        {/*   <Experience />
-            <Tech />
+        {/*<Tech />
             <Works />
             <Feedbacks />
             <div className="relative z-0">
