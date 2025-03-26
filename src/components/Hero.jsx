@@ -28,7 +28,7 @@ const Hero = () => {
 
   return (
     <>
-      <section className="relative w-full sm:h-full h-fit sm:px-16 px-6 sm:pt-16 pt-10">
+      <section className="relative w-full h-[calc(100vh-68px)] sm:px-16 px-6 sm:pt-16 pt-10">
         <div className={`flex flex-row items-start gap-5`}>
           {/* Left-side indicator */}
           <div className="flex flex-col justify-center items-center mt-5">

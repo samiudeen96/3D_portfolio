@@ -14,10 +14,7 @@ import {
   StarsCanvas,
 } from "./components";
 
-const App = () => {  
-  // const [showContent, setShowContent] = useState(false);
-  
-
+const App = () => { 
   return (
     <BrowserRouter>
       <div className="relative z-0 bg-primary">
