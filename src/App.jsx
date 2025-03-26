@@ -18,7 +18,7 @@ const App = () => {
       <div className="relative z-0 bg-primary">
         <div className="bg-hero bg-cover bg-no-repeat bg-center">
           <Navbar />
-          <div className="pt-40 sm:pt-25 lg:pt-50">
+          <div className="pt-25 sm:pt-5">
             <Hero />
           </div>
         </div>

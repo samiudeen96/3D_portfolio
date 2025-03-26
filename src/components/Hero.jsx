@@ -9,7 +9,7 @@ const Hero = () => {
   useEffect(() => {
     const handleScroll = () => {
       // Hide mouse when scrolling down
-      if (window.scrollY > 50) {
+      if (window.scrollY > 45) {
         setIsVisible(false);
       } else {
         setIsVisible(true);
@@ -26,14 +26,14 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative w-full h-screen">
+    <section className="relative w-full sm:h-full h-fit sm:px-16 px-6 sm:pt-16 pt-10">
       <div
-        className={`${styles.paddingX} max-w-7xl mx-auto flex flex-row items-start gap-5`}
+        className={`flex flex-row items-start gap-5`}
       >
         {/* Left-side indicator */}
         <div className="flex flex-col justify-center items-center mt-5">
           <div className="w-5 h-5 rounded-full bg-[#915eff]" />
-          <div className="w-1 sm:h-50 h-30 violet-gradient" />
+          <div className="w-1 sm:h-40 h-30 violet-gradient" />
         </div>
 
         {/* Text section */}
@@ -55,13 +55,14 @@ const Hero = () => {
         </div>
       </div>
 
+
       <div
-        className={`absolute right-0 w-full flex justify-center items-center transition-opacity duration-500 ${
+        className={`w-full flex justify-center items-center transition-opacity duration-500 ${
           isVisible ? "opacity-100" : "opacity-0"
         }`}
       >
         <a href="#about">
-          <div className="mouse w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
+          <div className=" mouse w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2 relative">
             <motion.div
               animate={{ y: [0, 24, 0] }}
               transition={{

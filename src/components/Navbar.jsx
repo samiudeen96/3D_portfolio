@@ -9,9 +9,10 @@ const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   return (
-    <nav className={`${styles.paddingX} w-screen flex items-center py-4 fixed z-20 top-0 bg-primary`}>
-
-      <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
+    <nav
+      className={`${styles.paddingX} w-screen flex items-center py-4 fixed z-20 top-0 bg-primary`}
+    >
+      <div className="w-full flex justify-between items-center">
         <Link
           to="/"
           className="flex items-center gap-2"
@@ -27,7 +28,9 @@ const Navbar = () => {
           />
           <p className="text-white text-[18px] font-bold flex cursor-pointer">
             Samiudeen &nbsp;
-            <span className="sm:block hidden font-normal">| Front-End Developer</span>
+            <span className="sm:block hidden font-normal">
+              | Front-End Developer
+            </span>
           </p>
         </Link>
         {/* <p className="text-red-500">asdsa</p> */}
