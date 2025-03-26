@@ -1,5 +1,7 @@
 import { BrowserRouter } from "react-router-dom";
 
+import { useState } from 'react'
+
 import {
   About,
   Contact,
@@ -12,18 +14,26 @@ import {
   StarsCanvas,
 } from "./components";
 
-const App = () => {
+const App = () => {  
+  const [showContent, setShowContent] = useState(false);
+  console.log("showContent", showContent);
+  
+
   return (
     <BrowserRouter>
       <div className="relative z-0 bg-primary">
         <div className="bg-hero bg-cover bg-no-repeat bg-center">
           <Navbar />
-          <div className="pt-25 sm:pt-5">
-            <Hero />
+          <div className="pt-25 sm:pt-16">
+            <Hero setShowContent={setShowContent} />
           </div>
         </div>
-        <About />
-          {/*   <Experience />
+        {/* {showContent ?  <About showContent={showContent} /> : <span>Not working</span>} */}
+
+        <About showContent={showContent} />
+
+        
+        {/*   <Experience />
             <Tech />
             <Works />
             <Feedbacks />
