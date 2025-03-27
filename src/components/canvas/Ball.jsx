@@ -1,60 +1,40 @@
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import {
-  Decal,
-  Float,
-  OrbitControls,
-  Preload,
-  useTexture,
-} from "@react-three/drei";
+import { Decal, Float, OrbitControls, Preload, useTexture } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
 const Ball = (props) => {
-
-  const [decal] = useTexture([`${props.imgUrl}`]); 
-  // const [decal] = useTexture([props.imgUrl]);
-  console.log(props.imgUrl);
-  
-  // console.log("Image URL:", [`/3D_portfolio/${props.imgUrl}`]);
-  
+  // const decal = useTexture(props.imgUrl); // ✅ Correct usage
 
   return (
-    <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
-      <ambientLight intensity={0.25} />
-      <directionalLight position={[0, 0, 0.05]} />
+    <Float speed={2.5} rotationIntensity={2} floatIntensity={3}>
+      <ambientLight intensity={1} />
+      <directionalLight position={[2, 2, 5]} intensity={2} />
 
-      <mesh castShadow receiveShadow scale={2.75}>
+      <mesh castShadow receiveShadow scale={3}>
         <icosahedronGeometry args={[1, 1]} />
-        <meshStandardMaterial
-          color="#fff8eb"
-          polygonOffset
-          polygonOffsetFactor={-5}
-          flatShading
-        />
+        <meshStandardMaterial color="#fff8eb" polygonOffset polygonOffsetFactor={-5} flatShading />
+
         <Decal
           position={[0, 0, 1]}
-          rotation={[2 * Math.PI, 0, 6.25]}
+          rotation={[0, 0, 0]}
+          scale={0.8}
           flatShading
-          map={decal}
+          map={props.imgUrl} // ✅ Use directly
         />
       </mesh>
     </Float>
   );
 };
 
+
 const BallCanvas = ({ icon }) => {
   return (
-    <Canvas
-      frameloop="demand"
-      gl={{ preserveDrawingBuffer: true }}
-      style={{ width: "100%", height: "100%" }}
-      className="computerCanvas"
-    >
+    <Canvas frameloop="demand" gl={{ preserveDrawingBuffer: true }} className="computerCanvas">
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls enableZoom={false} />
         <Ball imgUrl={icon} />
       </Suspense>
-
       <Preload all />
     </Canvas>
   );
