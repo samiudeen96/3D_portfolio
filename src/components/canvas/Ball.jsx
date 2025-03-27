@@ -4,7 +4,7 @@ import { Decal, Float, OrbitControls, Preload, useTexture } from "@react-three/d
 import CanvasLoader from "../Loader";
 
 const Ball = (props) => {
-  // const decal = useTexture(props.imgUrl); // ✅ Correct usage
+  const decal = useTexture(props.imgUrl); // ✅ Correct usage
 
   return (
     <Float speed={2.5} rotationIntensity={2} floatIntensity={3}>
@@ -20,7 +20,7 @@ const Ball = (props) => {
           rotation={[0, 0, 0]}
           scale={0.8}
           flatShading
-          map={props.imgUrl} // ✅ Use directly
+          map={decal} // ✅ Use directly
         />
       </mesh>
     </Float>
