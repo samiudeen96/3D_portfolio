@@ -10,8 +10,13 @@ import {
 import CanvasLoader from "../Loader";
 
 const Ball = (props) => {
-  const [decal] = useTexture([props.imgUrl]);
-  // console.log("Image URL:", props.imgUrl);
+
+  const [decal] = useTexture([`${props.imgUrl}`]); 
+  // const [decal] = useTexture([props.imgUrl]);
+  console.log(props.imgUrl);
+  
+  // console.log("Image URL:", [`/3D_portfolio/${props.imgUrl}`]);
+  
 
   return (
     <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
