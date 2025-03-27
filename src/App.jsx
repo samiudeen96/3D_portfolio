@@ -16,7 +16,7 @@ import {
 
 const App = () => {
   return (
-    <BrowserRouter basename="https://samiudeen96.github.io/3D_portfolio/">
+    <BrowserRouter basename="/3D_portfolio">
       <div className="relative z-0 bg-primary">
         <div className="bg-hero bg-cover bg-no-repeat bg-center">
           <Navbar />
