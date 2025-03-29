@@ -1,5 +1,5 @@
 import { BrowserRouter } from "react-router-dom";
-
+import { useEffect } from "react";
 import {
   About,
   Contact,
@@ -13,6 +13,11 @@ import {
 } from "./components";
 
 const App = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <BrowserRouter basename="/3D_portfolio">
       <div className="relative z-0 bg-primary">
