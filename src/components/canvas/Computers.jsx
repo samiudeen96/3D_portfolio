@@ -6,7 +6,7 @@ import CanvasLoader from "../Loader";
 import { useMediaQuery } from "react-responsive";
 
 const Computers = () => {
-  const { scene } = useGLTF("/3D_portfolio/desktop_pc/scene.gltf"); // Include repo name
+  const { scene } = useGLTF("./desktop_pc/scene.gltf"); // Include repo name
 
   // Responsive
   const isMobile = useMediaQuery({ maxWidth: 767 });

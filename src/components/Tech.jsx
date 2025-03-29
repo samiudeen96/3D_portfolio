@@ -28,10 +28,10 @@ const TechCard = ({ icon, name, index }) => {
         }}
         className="card group-hover:rotate-y-180"
       >
-        <div class="front">
+        <div className="front">
           <img src={icon} alt={name} className="w-16 h-16 object-contain" />
         </div>
-        <div class="back text-center font-bold">{name}</div>
+        <div className="back text-center font-bold">{name}</div>
       </div>
     </motion.div>
     </motion.section>
@@ -43,8 +43,8 @@ const Tech = () => {
     <div className="w-full h-auto inset-0 z-[10] flipCard">
       <div className="flex flex-row flex-wrap justify-center gap-2">
         {technologies.map((tech, index) => (
-          <div className="w-28 h-28">
-            <TechCard key={tech.name} index={index} {...tech} />
+          <div className="w-28 h-28" key={index}>
+            <TechCard  index={index} {...tech} />
           </div>
         ))}
       </div>
