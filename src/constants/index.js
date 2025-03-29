@@ -106,14 +106,14 @@ const technologies = [
     name: "git",
     icon: git,
   },
-  {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "docker",
-    icon: docker,
-  },
+  // {
+  //   name: "figma",
+  //   icon: figma,
+  // },
+  // {
+  //   name: "docker",
+  //   icon: docker,
+  // },
 ];
 
 const experiences = [
@@ -122,7 +122,7 @@ const experiences = [
     company_name: "ILIFE Technologies",
     icon: ilife,
     iconBg: "#E6DEDD",
-    date: "Nov 2021 - Feb 2025",
+    date: "Apr 2019 - Dec 2019",
     points: [
       "Responsive Web Development - Built and optimized layouts using HTML5, CSS3, and JavaScript, improving mobile responsiveness across 100+ pages.",
       "Performance Optimization - Reduced load time by 40% for faster and more efficient user experiences.",
@@ -136,7 +136,7 @@ const experiences = [
     company_name: "Hasnatech",
     icon: hasnatech,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "Nov 2021 – Feb 2025",
     points: [
       "Frontend Development - Built 20+ responsive UI components using React.js & Tailwind CSS, boosting engagement by 30%.",
       "LMS Features & Gamification - Developed quizzes, progress tracking, certifications, and leaderboards to enhance learning.",
