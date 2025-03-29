@@ -37,7 +37,12 @@ const ExperienceCard = ({ experience }) => (
 
     <ul className="mt-5 list-disc ml-5 space-y-2">
       {experience.points.map((point, index) => (
-        <li key={`experience-point-${index}`} className="text-white-100 text-[14px pl-1 tracking-wider]">{point}</li>
+        <li
+          key={`experience-point-${index}`}
+          className="text-white-100 text-[14px pl-1 tracking-wider]"
+        >
+          {point}
+        </li>
       ))}
     </ul>
   </VerticalTimelineElement>
@@ -48,14 +53,15 @@ const Experience = () => {
     <>
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} `}>What I have done so far</p>
-        <h2 className={styles.sectionHeadText}>Work Experience.</h2>
+        <h2 className={styles.sectionHeadText}>Technologies.</h2>
       </motion.div>
 
       <div className="mt-20 flex flex-col">
         <VerticalTimeline>
-          {experiences.map((experience) => (
-            <ExperienceCard key={experience.title} experience={experience} />
-          ))}
+          {experiences
+            .sort((a, b) => b.id - a.id).map((experience) => (
+              <ExperienceCard key={experience.title} experience={experience} />
+            ))}
         </VerticalTimeline>
       </div>
     </>

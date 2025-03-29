@@ -6,6 +6,9 @@ import { technologies } from "../constants";
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
 import { staggerContainer } from "../utils/motion";
+import { styles } from "../styles";
+
+
 
 const TechCard = ({ icon, name, index }) => {
   return (
@@ -50,7 +53,11 @@ const TechCard = ({ icon, name, index }) => {
 
 const Tech = () => {
   return (
-    <div className="w-full h-auto inset-0 z-[10] flipCard">
+    <div className="w-full h-auto inset-0 z-[10] flipCard ">
+      {/* <motion.div variants={textVariant()}>
+              <p className={`${styles.sectionSubText} `}>What I have done so far</p>
+              <h2 className={styles.sectionHeadText}>Work Experience.</h2>
+            </motion.div> */}
       <div className="flex flex-row flex-wrap justify-center gap-2">
         {technologies.map((tech, index) => (
           <div className="w-28 h-28" key={index}>

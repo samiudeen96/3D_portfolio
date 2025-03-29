@@ -13,11 +13,6 @@ import {
 } from "./components";
 
 const App = () => {
-  useEffect(() => {
-    setTimeout(() => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }, 100);
-  }, []);
   return (
     <BrowserRouter basename="/3D_portfolio">
       <div className="relative z-0 bg-primary">

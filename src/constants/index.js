@@ -118,6 +118,7 @@ const technologies = [
 
 const experiences = [
   {
+    id: 1,
     title: "FrontEnd Developer / Internship",
     company_name: "ILIFE Technologies",
     icon: ilife,
@@ -132,6 +133,7 @@ const experiences = [
     ],
   },
   {
+    id: 2,
     title: "FrontEnd Developer | React Developer",
     company_name: "Hasnatech",
     icon: hasnatech,
