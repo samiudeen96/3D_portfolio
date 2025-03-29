@@ -8,6 +8,7 @@ import {
   html,
   css,
   reactjs,
+  angular,
   redux,
   tailwind,
   nodejs,
@@ -25,6 +26,8 @@ import {
   jobit,
   tripguide,
   threejs,
+  hotelGame,
+  collection,
 } from "../assets";
 
 export const navLinks = [
@@ -83,6 +86,10 @@ const technologies = [
     icon: reactjs,
   },
   {
+    name: "Angular",
+    icon: angular,
+  },
+  {
     name: "Redux Toolkit",
     icon: redux,
   },
@@ -121,6 +128,7 @@ const experiences = [
     id: 1,
     title: "FrontEnd Developer / Internship",
     company_name: "ILIFE Technologies",
+    company_url: "https://ilifetech.in/",
     icon: ilife,
     iconBg: "#E6DEDD",
     date: "Apr 2019 - Dec 2019",
@@ -136,6 +144,7 @@ const experiences = [
     id: 2,
     title: "FrontEnd Developer | React Developer",
     company_name: "Hasnatech",
+    company_url: "https://hasnatech.com/",
     icon: hasnatech,
     iconBg: "#E6DEDD",
     date: "Nov 2021 – Feb 2025",
@@ -221,7 +230,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
+    image: collection,
     source_code_link: "https://github.com/",
   },
   {
@@ -242,30 +251,9 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
-  },
+    image: hotelGame,
+    source_code_link: "https://github.com/hasnatech/hotel_game",
+  }
 ];
 
 export { services, technologies, experiences, testimonials, projects };
