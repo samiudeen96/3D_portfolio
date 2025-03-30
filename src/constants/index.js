@@ -11,6 +11,7 @@ import {
   angular,
   redux,
   tailwind,
+  bootstrap,
   nodejs,
   mongodb,
   git,
@@ -87,6 +88,10 @@ const technologies = [
   {
     name: "Tailwind CSS",
     icon: tailwind,
+  },
+  {
+    name: "Bootstrap",
+    icon: bootstrap,
   },
   {
     name: "Node JS",
