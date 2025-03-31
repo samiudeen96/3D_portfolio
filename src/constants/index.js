@@ -207,19 +207,19 @@ const projects = [
     tags: [
       {
         name: "react",
-        color: "blue-text-gradient",
+        color: "text-blue-400",
       },
       {
         name: "node.js",
-        color: "green-text-gradient",
+        color: "text-green-500",
       },
       {
         name: "mongodb",
-        color: "green-text-gradient",
+        color: "text-green-600",
       },
       {
         name: "tailwind",
-        color: "pink-text-gradient",
+        color: "text-blue-300",
       },
     ],
     image: collection,
@@ -233,15 +233,15 @@ const projects = [
     tags: [
       {
         name: "angular",
-        color: "red-text-gradient",
+        color: "text-red-500",
       },
-      // {
-      //   name: "restapi",
-      //   color: "green-text-gradient",
-      // },
       {
-        name: "scss",
-        color: "pink-text-gradient",
+        name: "typeScript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "bootstarp",
+        color: "text-violet-600",
       },
     ],
     image: hotelGame,
