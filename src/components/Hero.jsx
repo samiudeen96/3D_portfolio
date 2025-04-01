@@ -45,16 +45,16 @@ const Hero = () => {
 
           {/* Text section */}
           <div>
-            <h1 className={`${styles.heroHeadText} text-white`}>
+            <h1 className={`${styles.heroHeadText}`}>
               Hi, I'm <span className="text-[#915eff]">Samiudeen</span>
             </h1>
-            <h3 className="text-[30px] font-semibold">
+            <h3 className={`${styles.heroSubText}`}>
               And I'm <span className="text-[#915eff]">{text}</span>
               <span>
                 <Cursor />
               </span>
             </h3>
-            <p className={`text-[28px] mt-5 text-white-100`}>
+            <p className={`${styles.heroSubText} mt-5 `}>
               I craft seamless user interfaces, interactive{" "}
               <br className="sm:block hidden" /> experiences, and modern web
               applications.
