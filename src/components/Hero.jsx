@@ -1,17 +1,24 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
-import { ComputersCanvas } from "./canvas"; 
+import { ComputersCanvas } from "./canvas";
+import { useTypewriter, Cursor } from "react-simple-typewriter";
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(true);
+
+  const [ text ] = useTypewriter({
+    words: ["Front-End Developer"],
+    loop: {},
+    typeSpeed: 70,
+    deleteSpeed: 70,
+  });
 
   useEffect(() => {
     const handleScroll = () => {
       // Hide mouse when scrolling down
       if (window.scrollY > 50) {
         setIsVisible(false);
-        
       } else {
         setIsVisible(true);
       }
@@ -29,7 +36,7 @@ const Hero = () => {
   return (
     <>
       <section className="relative w-full h-[calc(100vh-80px)] sm:h-[calc(100vh-60px)] md:h-[calc(100vh-40px)] lg:h-[calc(100vh-20px)] sm:px-16 px-6 sm:pt-16 pt-10">
-        <div className={`flex flex-row items-start gap-5`}>
+        <div className={`flex flex-row items-start gap-5 ps-2`}>
           {/* Left-side indicator */}
           <div className="flex flex-col justify-center items-center mt-5">
             <div className="w-5 h-5 rounded-full bg-[#915eff]" />
@@ -41,12 +48,34 @@ const Hero = () => {
             <h1 className={`${styles.heroHeadText} text-white`}>
               Hi, I'm <span className="text-[#915eff]">Samiudeen</span>
             </h1>
-            <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-              {/* I develop 3D visuals, user <br className="sm:block hidden" />{" "}
-              interfaces and web applications */}
-              I craft seamless user interfaces, interactive <br className="sm:block hidden" />{" "} experiences, and modern web applications.
+            <h3 className="text-[30px] font-semibold">
+              And I'm <span className="text-[#915eff]">{text}</span>
+              <span>
+                <Cursor />
+              </span>
+            </h3>
+            <p className={`text-[28px] mt-5 text-white-100`}>
+              I craft seamless user interfaces, interactive{" "}
+              <br className="sm:block hidden" /> experiences, and modern web
+              applications.
             </p>
           </div>
+
+          {/* <div>
+            <p className="text-secondary text-[35px] ">
+              Hi, I'm{" "}
+              <span className="text-[#915eff] font-bold">Samiudeen</span>
+            </p>
+            <p className="text-[28px] font-semibold">
+              And I'm a{" "}
+              <span className="text-[#915eff]">Front-End Developer</span>
+            </p>
+            <p className={`text-[25px] mt-2 text-white-100`}>
+              I craft seamless user interfaces, interactive{" "}
+              <br className="sm:block hidden" /> experiences, and modern web
+              applications.
+            </p>
+          </div> */}
         </div>
 
         {/* 3D Model Section */}
@@ -76,7 +105,6 @@ const Hero = () => {
           </a>
         </div>
       </section>
-      
     </>
   );
 };

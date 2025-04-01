@@ -3,62 +3,68 @@
 @import "tailwindcss";
 
 @theme {
-    --color-primary: #050816;
-    --color-secondary: #aaa6c3;
-    --color-tertiary: #151030;
-    --color-black-100: #100d25;
-    --color-black-200: #090325;
-    --color-white-100: #f3f3f3;
-    --shadow-card: 0px 35px 120px -15px #211e35;
-    --bg-hero: url('/src/assets/herobg.png');
-  }
+  --color-primary: #050816;
+  --color-secondary: #aaa6c3;
+  --color-tertiary: #151030;
+  --color-black-100: #100d25;
+  --color-black-200: #090325;
+  --color-white-100: #f3f3f3;
+  --shadow-card: 0px 35px 120px -15px #211e35;
+  --bg-hero: url("/src/assets/herobg.png");
+}
 
-  .bg-hero {
-    background-image: var(--bg-hero);
-  }
+.bg-hero {
+  background-image: var(--bg-hero);
+}
 
-  .card-container {
-    @apply perspective-[900px] mr-5;
-  }
-  
-  .card {
-    @apply relative w-[100px] h-[100px] transition-all duration-500 ease-in-out;
-    transform-style: preserve-3d;
-  }
-  
-  .front, .back {
-    @apply absolute top-0 left-0 w-[100px] h-[100px] bg-[#3e415f] rounded-md shadow-lg flex items-center justify-center;
-    backface-visibility: hidden;
-  }
-  
-  .front {
-    @apply text-3xl;
-  }
-  
-  .back {
-    @apply text-sm p-2;
-    transform: rotateY(180deg);
-  }
-  
-  .group:hover .card {
-    transform: rotateY(180deg);
-  }
+.card-container {
+  @apply perspective-[900px] mr-5;
+}
 
-  .flipCard{
-    @apply sm:px-16 px-6 sm:py-16 py-6;
-    background: linear-gradient(356deg, rgba(29,24,54,1) 31%, rgba(5,8,22,1) 73%);
-  }
+.card {
+  @apply relative w-[100px] h-[100px] transition-all duration-500 ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.front,
+.back {
+  @apply absolute top-0 left-0 w-[100px] h-[100px] bg-[#3e415f] rounded-md shadow-lg flex items-center justify-center;
+  backface-visibility: hidden;
+}
+
+.front {
+  @apply text-3xl;
+}
+
+.back {
+  @apply text-sm p-2;
+  transform: rotateY(180deg);
+}
+
+.group:hover .card {
+  transform: rotateY(180deg);
+}
+
+.flipCard {
+  @apply sm:px-16 px-6 sm:py-16 py-6;
+  background: linear-gradient(
+    356deg,
+    rgba(29, 24, 54, 1) 31%,
+    rgba(5, 8, 22, 1) 73%
+  );
+}
 
 
-  .computerCanvas {
-    cursor: grab;
-    /* margin: 25px; */
-    /* width: 800px;
+
+.computerCanvas {
+  cursor: grab;
+  /* margin: 25px; */
+  /* width: 800px;
   height: 400px; */
-  }
-  .computerCanvas:active {
-    cursor: grabbing;
-  }
+}
+.computerCanvas:active {
+  cursor: grabbing;
+}
 
 * {
   /* margin: 0; */
