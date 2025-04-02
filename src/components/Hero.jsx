@@ -7,7 +7,7 @@ import { useTypewriter, Cursor } from "react-simple-typewriter";
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(true);
 
-  const [ text ] = useTypewriter({
+  const [text] = useTypewriter({
     words: ["Front-End Developer"],
     loop: {},
     typeSpeed: 70,

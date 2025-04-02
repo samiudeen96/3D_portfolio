@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
+import Swal from 'sweetalert2'
 
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
@@ -16,9 +16,35 @@ const Contact = () => {
   });
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e) => {};
-
-  const handleSubmit = (e) => {};
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+  
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setLoading(true);
+  
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: JSON.stringify({ ...form, access_key: "11b00ff0-2be1-4b01-aa68-eec2e53862ea" })
+    }).then((res) => res.json());
+  
+    setLoading(false);
+  
+    if (res.success) {
+      Swal.fire({
+        title: "Success!",
+        text: "Message sent successfully!",
+        icon: "success",
+      });
+      console.log("Success", res);
+      setForm({ name: "", email: "", message: "" }); // Reset form
+    }
+  };
 
   return (
     <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
@@ -31,7 +57,7 @@ const Contact = () => {
 
         <form
           ref={formRef}
-          onSubmit={handleSubmit}
+          onSubmit={onSubmit}
           className="mt-12 flex flex-col gap-8"
         >
           {/* name */}
@@ -44,6 +70,7 @@ const Contact = () => {
               onChange={handleChange}
               placeholder="What's your name?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
+              required
             />
           </label>
 
@@ -57,6 +84,7 @@ const Contact = () => {
               onChange={handleChange}
               placeholder="What's your email?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
+              required
             />
           </label>
 
@@ -70,6 +98,7 @@ const Contact = () => {
               onChange={handleChange}
               placeholder="What do you want to say?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
+              required
             />
           </label>
           <button
