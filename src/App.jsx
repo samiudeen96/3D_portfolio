@@ -16,13 +16,12 @@ const App = () => {
   return (
     <BrowserRouter basename="/3D_portfolio">
       <div className="relative z-0 bg-primary">
-        <div className="bg-hero bg-cover bg-no-repeat bg-center">
+        <div className="">
           <Navbar />
-          <div className="pt-15 sm:pt-0">
+        </div>
+        <div className="bg-hero bg-cover bg-no-repeat bg-center pt-15 md:pt-0 lg:pt-0">
             <Hero />
           </div>
-        </div>
-
         <About />
         <Experience />
         <div className="relative z-0">
