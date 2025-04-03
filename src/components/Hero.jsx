@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
+import { SectionWrapper } from '../hoc'
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -35,7 +36,7 @@ const Hero = () => {
 
   return (
     <>
-      <section className="relative w-full h-[calc(100vh-80px)] sm:h-[calc(100vh-60px)] md:h-[calc(100vh-40px)] lg:h-[calc(100vh-20px)] sm:px-16 px-6 sm:pt-16 pt-10">
+      <section className="relative w-full h-[calc(100vh-80px)] sm:h-[calc(100vh-60px)] md:h-[calc(100vh-40px)] lg:h-[calc(100vh-20px)]">
         <div className={`flex flex-row items-start gap-5 ps-2`}>
           {/* Left-side indicator */}
           <div className="flex flex-col justify-center items-center mt-5">
@@ -49,10 +50,10 @@ const Hero = () => {
               Hi, I'm <span className="text-[#915eff]">Samiudeen</span>
             </h1>
             <h3 className={`${styles.heroSubText}`}>
-              And I'm <span className="text-[#915eff]">{text}</span>
-              <span>
-                <Cursor />
-              </span>
+              And I'm <span className="text-[#915eff]">{text}<Cursor /></span>
+              {/* <span>
+                
+              </span> */}
             </h3>
             <p className={`${styles.heroSubText} mt-5 `}>
               I craft seamless user interfaces, interactive{" "}
@@ -109,4 +110,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default SectionWrapper(Hero, "home");
