@@ -53,12 +53,12 @@ const TechCard = ({ icon, name, index }) => {
 
 const Tech = () => {
   return (
-    <div className="w-full h-auto inset-0 z-[10] flipCard ">
-      {/* <motion.div variants={textVariant()}>
-              <p className={`${styles.sectionSubText} `}>What I have done so far</p>
-              <h2 className={styles.sectionHeadText}>Work Experience.</h2>
-            </motion.div> */}
-      <div className="flex flex-row flex-wrap justify-center gap-2">
+    <div className={`${styles.padding} w-full h-auto inset-0 z-[10] flipCard`}>
+      <motion.div variants={textVariant()}>
+              {/* <p className={`${styles.sectionSubText} `}>What I have done so far</p> */}
+              <h2 className={styles.sectionHeadText}>Tech Stack.</h2>
+            </motion.div>
+      <div className="flex flex-row flex-wrap justify-center gap-2 pt-10">
         {technologies.map((tech, index) => (
           <div className="w-28 h-28" key={index}>
             <TechCard index={index} {...tech} />
