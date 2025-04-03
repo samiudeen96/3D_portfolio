@@ -36,7 +36,7 @@ const Hero = () => {
 
   return (
     <>
-      <section className="relative w-full h-[calc(100vh-90px)] sm:h-[calc(100vh-60px)] md:h-[calc(100vh-40px)] lg:h-[calc(100vh-20px)]">
+      <section className="relative w-full h-[calc(100vh-90px)] sm:h-[calc(100vh-60px)] md:h-[calc(100vh-40px)] lg:h-[calc(100vh-20px)] pt-15 md:pt-0 lg:pt-0">
         <div className={`flex flex-row items-start gap-5 ps-2`}>
           {/* Left-side indicator */}
           <div className="flex flex-col justify-center items-center mt-5">

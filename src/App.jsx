@@ -19,7 +19,7 @@ const App = () => {
         <div className="">
           <Navbar />
         </div>
-        <div className="bg-hero bg-cover bg-no-repeat bg-center pt-15 md:pt-0 lg:pt-0">
+        <div className="bg-hero bg-cover bg-no-repeat bg-center ">
             <Hero />
           </div>
         <About />
