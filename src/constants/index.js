@@ -14,7 +14,8 @@ import {
   bootstrap,
   nodejs,
   mongodb,
-  git,
+  github,
+  vercel,
   ilife,
   hasnatech,
   threejs,
@@ -106,15 +107,19 @@ const technologies = [
     icon: threejs,
   },
   {
-    name: "git",
-    icon: git,
+    name: "github",
+    icon: github,
   },
+  {
+    name: "Vercel",
+    icon: vercel,
+  }
 ];
 
 const experiences = [
   {
     id: 1,
-    title: "FrontEnd Developer / Internship",
+    title: "Front-End Developer / Internship",
     company_name: "ILIFE Technologies",
     company_url: "https://ilifetech.in/",
     icon: ilife,
@@ -123,21 +128,21 @@ const experiences = [
     points: [
       "Responsive Web Development - Built and optimized layouts using HTML5, CSS3, and JavaScript, improving mobile responsiveness across 100+ pages.",
       "Performance Optimization - Reduced load time by 40% for faster and more efficient user experiences.",
-      "Frontend & Backend Integration - Collaborated with backend developers to ensure seamless server-side connectivity.",
+      "Front-End & Backend Integration - Collaborated with backend developers to ensure seamless server-side connectivity.",
       "Testing & Debugging - Identified and fixed issues to enhance website functionality and user experience.",
       "UI Consistency & Best Practices - Maintained design consistency, followed coding standards, and implemented interactive features for better engagement.",
     ],
   },
   {
     id: 2,
-    title: "FrontEnd Developer | React Developer",
+    title: "Front-End Developer | React Developer",
     company_name: "Hasnatech",
     company_url: "https://hasnatech.com/",
     icon: hasnatech,
     iconBg: "#E6DEDD",
     date: "Nov 2021 – Feb 2025",
     points: [
-      "Frontend Development - Built 20+ responsive UI components using React.js & Tailwind CSS, boosting engagement by 30%.",
+      "Front-End Development - Built 20+ responsive UI components using React.js & Tailwind CSS, boosting engagement by 30%.",
       "LMS Features & Gamification - Developed quizzes, progress tracking, certifications, and leaderboards to enhance learning.",
       "Interactive & Accessible Design - Integrated animations, videos, and ensured WCAG compliance for a seamless experience.",
       "Collaboration & Communication - Added chat, forums, and live session features for better user interaction.",

@@ -44,7 +44,7 @@ const TechCard = ({ icon, name, index }) => {
               <img src={icon} alt={name} className="w-16 h-16 object-contain" />
             </motion.div>
           </div>
-          <div className="back text-center font-bold">{name}</div>
+          <div className="back text-center text-[#dfd9ff] font-semibold">{name}</div>
         </div>
       </motion.div>
     </motion.section>
