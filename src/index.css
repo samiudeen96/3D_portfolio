@@ -22,13 +22,13 @@
 }
 
 .card {
-  @apply relative w-[80px] h-[80px] transition-all duration-500 ease-in-out;
+  @apply relative w-[75px] h-[75px] transition-all duration-500 ease-in-out;
   transform-style: preserve-3d;
 }
 
 .front,
 .back {
-  @apply absolute top-0 left-0 w-[80px] h-[80px] bg-[#3e415f] rounded-md shadow-lg flex items-center justify-center;
+  @apply absolute top-0 left-0 w-[75px] h-[75px] bg-[#3e415f] rounded-md shadow-lg flex items-center justify-center;
   backface-visibility: hidden;
 }
 

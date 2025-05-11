@@ -3,8 +3,7 @@ import { motion } from "framer-motion";
 
 import { Tilt } from "react-tilt";
 import { styles } from "../styles";
-import { github } from "../assets";
-import { live } from "../assets";
+import { github, live } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
@@ -19,7 +18,12 @@ const ProjectCard = ({
   live_link
 }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+    <motion.div
+      variants={fadeIn("up", "spring", index * 0.5, 0.75)}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.25 }}
+    >
       <Tilt
         options={{
           max: 45,
@@ -35,7 +39,7 @@ const ProjectCard = ({
             className="w-full h-full object-cover rounded-2xl"
           />
           <div className="absolute inset-0 flex justify-end m-3 card-img_hover gap-1">
-            {/* github */}
+            {/* GitHub */}
             <div
               onClick={() => window.open(source_code_link, "_blank")}
               className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
@@ -47,7 +51,7 @@ const ProjectCard = ({
               />
             </div>
 
-            {/* live  */}
+            {/* Live */}
             <div
               onClick={() => window.open(live_link, "_blank")}
               className="bg-[#009b2d] w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
@@ -79,29 +83,37 @@ const ProjectCard = ({
 const Works = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <motion.div variants={textVariant()} initial="hidden" whileInView="show">
         <p className={styles.sectionSubText}>My Work</p>
         <h2 className={styles.sectionHeadText}>Projects.</h2>
       </motion.div>
 
-      <div className="w-full flex">
-        <motion.p
-          variants={fadeIn("", "", 0.1, 1)}
-          className="mt-3 text-secondary text-[17px] leading-[30px]"
-        >
+      <motion.div
+        className="w-full flex"
+        variants={fadeIn("", "", 0.1, 1)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.25 }}
+      >
+        <p className="mt-3 text-secondary text-[17px] leading-[30px]">
           Following projects showcases my skills and experience through
           real-world examples of my work. Each project is briefly described with
-          links to code reppositories and live demos in it. It reflects my
-          ability to solve complex problems, work with different technologies,
-          and manage projects effectively.
-        </motion.p>
-      </div>
+          links to code repositories and live demos. It reflects my ability to solve
+          complex problems, work with different technologies, and manage projects
+          effectively.
+        </p>
+      </motion.div>
 
-      <div className="mt-10 flex flex-wrap gap-7 pb-10">
+      <motion.div
+        className="mt-10 flex flex-wrap gap-7 pb-10"
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.25 }}
+      >
         {projects.map((project, index) => (
-          <ProjectCard key={`project ${index}`} index={index} {...project} />
+          <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
-      </div>
+      </motion.div>
     </>
   );
 };

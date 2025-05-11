@@ -30,7 +30,7 @@ const AboutMe = () => {
 
         {/* Replace service cards with experience cards */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 sm:gap-10 gap-5 mt-10"
+          className="grid grid-cols-1 md:grid-cols-2 sm:gap-15 gap-10 mt-10"
           variants={fadeIn("up", 0.8)}
           initial="hidden"
           animate="show"

@@ -91,7 +91,7 @@ const Hero = () => {
             isVisible ? "opacity-100" : "opacity-0"
           }`}
         >
-          <a href="#about">
+          <a href="#aboutMe">
             <div className=" mouse w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2 relative z-10">
               <motion.div
                 animate={{ y: [0, 24, 0] }}
