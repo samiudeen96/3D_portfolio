@@ -41,10 +41,10 @@ const TechCard = ({ icon, name, index }) => {
                 ease: "easeInOut", // Smooth transition
               }}
             >
-              <img src={icon} alt={name} className="w-16 h-16 object-contain" />
+              <img src={icon} alt={name} className="w-12 h-12 object-contain" />
             </motion.div>
           </div>
-          <div className="back text-center text-[#dfd9ff] font-semibold">{name}</div>
+          <div className="back text-center text-[#dfd9ff] font-medium">{name}</div>
         </div>
       </motion.div>
     </motion.section>
@@ -58,9 +58,9 @@ const Tech = () => {
               {/* <p className={`${styles.sectionSubText} `}>What I have done so far</p> */}
               <h2 className={styles.sectionHeadText}>Tech Stack.</h2>
             </motion.div>
-      <div className="flex flex-row flex-wrap justify-center gap-2 pt-10">
+      <div className="flex flex-row flex-wrap justify-center gap-5 pt-10">
         {technologies.map((tech, index) => (
-          <div className="w-28 h-28" key={index}>
+          <div className="w-20 h-20" key={index}>
             <TechCard index={index} {...tech} />
           </div>
         ))}

@@ -13,6 +13,7 @@ import {
   tailwind,
   bootstrap,
   nodejs,
+  mysql,
   mongodb,
   github,
   vercel,
@@ -24,7 +25,7 @@ import {
   portfolio,
   expTracker,
   railway,
-  todo
+  todo,
 } from "../assets";
 
 export const navLinks = [
@@ -75,6 +76,14 @@ const technologies = [
     icon: css,
   },
   {
+    name: "Tailwind CSS",
+    icon: tailwind,
+  },
+  {
+    name: "Bootstrap",
+    icon: bootstrap,
+  },
+  {
     name: "JavaScript",
     icon: javascript,
   },
@@ -95,16 +104,12 @@ const technologies = [
     icon: redux,
   },
   {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
-    name: "Bootstrap",
-    icon: bootstrap,
-  },
-  {
     name: "Node JS",
     icon: nodejs,
+  },
+    {
+    name: "MySQL",
+    icon: mysql,
   },
   {
     name: "MongoDB",
@@ -397,4 +402,47 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, projects };
+const expIn = [
+  {
+    name: "Front-end Developer",
+    desc: "I design and build beautiful, responsive interfaces with a focus on performance and accessibility.",
+    points: [
+      {
+        list: "✔️ HTML / CSS / JavaScript / TypeScript",
+      },
+      {
+        list: "✔️ React / Angular / Tailwind CSS",
+      },
+      {
+        list: "✔️ UI/UX & Responsive Design",
+      },
+    ],
+    textColor: "text-[#915eff]",
+    borderColor: "border-indigo-100",
+    fromColor: "from-indigo-100",
+    bgColor: "bg-indigo-100",
+    category: "frontend",
+  },
+  {
+    name: "Full-stack Developer",
+    desc: "I build robust backend systems, APIs, and database structures that power modern web applications.",
+    points: [
+      {
+        list: "✔️ Node.js",
+      },
+      {
+        list: "✔️ Express / MongoDb / MySQL",
+      },
+      {
+        list: "✔️ API Integration & Security",
+      },
+    ],
+    textColor: "text-green-700",
+    borderColor: "border-green-100",
+    fromColor: "from-green-100",
+    bgColor: "bg-green-100",
+    category: "fullstack",
+  },
+];
+
+export { services, technologies, experiences, projects, expIn };
