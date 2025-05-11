@@ -5,6 +5,7 @@ import mobile from "./mobile.png";
 import web from "./web.png";
 import github from "./github.png";
 import vercel from "./tech/vercel.png"
+import railway from "./tech/railway.png";
 import live from "./live.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
@@ -28,9 +29,11 @@ import threejs from "./tech/threejs.svg";
 import ilife from "./company/ilife.png";
 import hasnatech from "./company/hasnatech.png";
 
-import collection from "./collection.png"
-import hotelGame from "./hotelGame.png"
-
+import portfolio from "./project/portfolio.png";
+import collection from "./project/collection.png";
+import hotelGame from "./project/hotelGame.png";
+import expTracker from "./project/expTracker.png"
+import todo from "./project/todo.png"
 
 
 export {
@@ -41,6 +44,7 @@ export {
   web,
   github,
   vercel,
+  railway,
   live,
   menu,
   close,
@@ -66,6 +70,10 @@ export {
   ilife,
   hasnatech,
 
+  // Project
+  portfolio,
   collection,
-  hotelGame
+  hotelGame,
+  expTracker,
+  todo
 };

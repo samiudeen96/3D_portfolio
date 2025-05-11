@@ -21,6 +21,10 @@ import {
   threejs,
   hotelGame,
   collection,
+  portfolio,
+  expTracker,
+  railway,
+  todo
 } from "../assets";
 
 export const navLinks = [
@@ -118,6 +122,10 @@ const technologies = [
     name: "Vercel",
     icon: vercel,
   },
+  {
+    name: "Railway",
+    icon: railway,
+  },
 ];
 
 const experiences = [
@@ -208,7 +216,85 @@ const experiences = [
 //   },
 // ];
 
+// const projects = [
+//   {
+//     name: "Ecommerce",
+//     description:
+//       "Web-based platform for buying and selling products or services. It includes features like product listings, shopping carts, secure payments, and order management.",
+//     tags: [
+//       {
+//         name: "react",
+//         color: "text-blue-400",
+//       },
+//       {
+//         name: "node.js",
+//         color: "text-green-500",
+//       },
+//       {
+//         name: "mongodb",
+//         color: "text-green-600",
+//       },
+//       {
+//         name: "tailwind",
+//         color: "text-blue-300",
+//       },
+//     ],
+//     image: collection,
+//     source_code_link: "https://github.com/samiudeen96/collection",
+//     live_link: "https://collection-plum.vercel.app/",
+//   },
+//   {
+//     name: "Hotel Game",
+//     description:
+//       "Web page is likely based on a hotel management simulation game where players manage a hotel, handle bookings, and optimize services to grow their business.",
+//     tags: [
+//       {
+//         name: "angular",
+//         color: "text-red-500",
+//       },
+//       {
+//         name: "typeScript",
+//         color: "blue-text-gradient",
+//       },
+//       {
+//         name: "bootstarp",
+//         color: "text-violet-600",
+//       },
+//     ],
+//     image: hotelGame,
+//     source_code_link: "https://github.com/samiudeen96/hotelGame",
+//     live_link: "https://hasnatech.github.io/hotel_game/",
+//   },
+// ];
+
 const projects = [
+  {
+    name: "Expense Tracker",
+    description:
+      "Built a finance tracking app to manage income and expenses with real-time balance updates. Included category-wise summaries for better financial insights.",
+    tags: [
+      {
+        name: "react",
+        color: "text-blue-400",
+      },
+      {
+        name: "tailwind",
+        color: "text-blue-500",
+      },
+      {
+        name: "node.js",
+        color: "text-green-500",
+      },
+      {
+        name: "MySQL",
+        color: "text-blue-900",
+      },
+    ],
+    category: "FullStack Development",
+    image: expTracker,
+    source_code_link: "https://github.com/samiudeen96/ExpenseTracker",
+    live_link: "https://expensetracker-samiudeen.vercel.app/",
+  },
   {
     name: "Ecommerce",
     description:
@@ -219,6 +305,10 @@ const projects = [
         color: "text-blue-400",
       },
       {
+        name: "tailwind",
+        color: "text-blue-500",
+      },
+      {
         name: "node.js",
         color: "text-green-500",
       },
@@ -226,11 +316,8 @@ const projects = [
         name: "mongodb",
         color: "text-green-600",
       },
-      {
-        name: "tailwind",
-        color: "text-blue-300",
-      },
     ],
+    category: "FullStack Development",
     image: collection,
     source_code_link: "https://github.com/samiudeen96/collection",
     live_link: "https://collection-plum.vercel.app/",
@@ -246,16 +333,67 @@ const projects = [
       },
       {
         name: "typeScript",
-        color: "blue-text-gradient",
+        color: "text-blue-500",
       },
       {
         name: "bootstarp",
         color: "text-violet-600",
       },
     ],
+    category: "Frontend Development",
     image: hotelGame,
     source_code_link: "https://github.com/samiudeen96/hotelGame",
     live_link: "https://hasnatech.github.io/hotel_game/",
+  },
+  {
+    name: "Portfolio",
+    description:
+      "An interactive portfolio by Samiudeen showcasing web projects and skills. Features modern design and smooth navigation for a standout experience.",
+    tags: [
+      {
+        name: "react",
+        color: "text-blue-400",
+      },
+      {
+        name: "javascript",
+        color: "text-yellow-500",
+      },
+      {
+        name: "tailwind",
+        color: "text-blue-500",
+      },
+      {
+        name: "three.js",
+        color: "",
+      },
+    ],
+    category: "Frontend Development",
+    image: portfolio,
+    source_code_link: "https://github.com/samiudeen96/portfolio",
+    live_link: "https://samiudeen96.github.io/portfolio",
+  },
+  {
+    name: "ToDo App",
+    description:
+      "Developed a simple and clean To-Do web app for task management. Users can create, view, filter, edit, and delete tasks based on their status.",
+    tags: [
+      {
+        name: "react",
+        color: "text-blue-400",
+      },
+      {
+        name: "javascript",
+        color: "text-yellow-500",
+      },
+      {
+        name: "tailwind",
+        color: "text-blue-500",
+      },
+    ],
+    category: "Frontend Development",
+    image: todo,
+    source_code_link: "https://github.com/samiudeen96/To-Do",
+    live_link: "https://samiudeen96.github.io/To-Do",
   },
 ];
 
